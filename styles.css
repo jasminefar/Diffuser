@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.diffuser {
+    position: relative;
+    width: 60px;
+    height: 150px;
+    background-color: #8B4513;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.stick {
+    position: absolute;
+    top: -30px;
+    left: 26px;
+    width: 6px;
+    height: 50px;
+    background-color: #A0522D;
+}
+
+.smoke {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    opacity: 0;
+    background: radial-gradient(circle, rgba(169,169,169,0.6) 0%, rgba(169,169,169,0) 70%);
+    animation: none;
+    pointer-events: none;
+}
+
+@keyframes smoke {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100px;
+        height: 150px;
+        opacity: 0;
+    }
+}
